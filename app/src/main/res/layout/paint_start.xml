@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Main2Activity"
+        android:orientation="vertical"
+        android:background="#fff0f5"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:id="@+id/wwidth"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="@string/width"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittextstyle"
+            android:layout_alignBottom="@+id/wheight"
+            android:layout_alignLeft="@+id/dwidth"
+            android:layout_alignStart="@+id/dwidth" />
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:id="@+id/spinner2"
+            android:layout_alignBottom="@+id/PaintType"
+            android:layout_alignLeft="@+id/spinner"
+            android:layout_alignStart="@+id/spinner">
+        </Spinner>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:id="@+id/dwidth"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="@string/width"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittextstyle"
+            android:layout_alignBottom="@+id/dheight"
+            android:layout_toEndOf="@+id/win" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:id="@+id/winwidth"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="@string/width"
+            android:inputType="number"
+            android:background="@drawable/edittextstyle"
+            android:layout_alignBottom="@+id/winheight"
+            android:layout_toEndOf="@+id/win" />
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:id="@+id/spinner"
+            android:layout_alignTop="@+id/Surface"
+            android:layout_alignStart="@+id/winwidth"
+            android:layout_marginTop="11dp">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PaintType"
+            android:text="Paint Type:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_alignBottom="@+id/calculate"
+            android:layout_alignStart="@+id/makeselection"
+            android:layout_marginBottom="84dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Surface"
+            android:text="Surface:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_above="@+id/spinner2"
+            android:layout_alignStart="@+id/PaintType"
+            android:layout_marginBottom="13dp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:id="@+id/winheight"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="@string/height"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittextstyle"
+            android:layout_above="@+id/spinner"
+            android:layout_alignStart="@+id/Surface"
+            android:layout_marginBottom="19dp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:id="@+id/dheight"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="@string/height"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittextstyle"
+            android:layout_above="@+id/win"
+            android:layout_alignStart="@+id/win"
+            android:layout_marginBottom="14dp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:id="@+id/wheight"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="@string/height"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittextstyle"
+            android:layout_above="@+id/door"
+            android:layout_alignStart="@+id/door"
+            android:layout_marginBottom="31dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wall"
+            android:text="@string/wall_in_feet"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_above="@+id/wheight"
+            android:layout_alignEnd="@+id/door"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calculate"
+            android:text="Calculate"
+            android:layout_marginBottom="84dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/winheight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/door"
+            android:text="@string/door_in_feet"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_above="@+id/dheight"
+            android:layout_alignStart="@+id/dheight"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/win"
+            android:text="@string/window_in_feet"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/winheight"
+            android:layout_alignStart="@+id/winheight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/makeselection"
+            android:text="@string/select_colour"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginStart="43dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginBottom="43dp"
+            android:layout_above="@+id/wall"
+            android:layout_toEndOf="@+id/textView2" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:id="@+id/texthex"
+            android:layout_marginLeft="190dp"
+            android:layout_alignBaseline="@+id/makeselection"
+            android:layout_alignBottom="@+id/makeselection"
+            android:layout_alignStart="@+id/wwidth"
+            android:layout_marginStart="10dp" />
+
+
+    </RelativeLayout>
+</ScrollView>
